@@ -81,23 +81,54 @@ text-shadow: 0 0 15px #00ff33, 0 0 30px #00ff33;
 <h3>// CHAPTER 15: THE ULTIMATE PROTOCOL - TETAP RENDAH HATI</h3>
 <p>Seseorang yang benar-benar hebat tidak akan pamer di media sosial atau meretas wifi sekolah demi pujian. Hacker sejati bergerak dalam diam, fokus pada pengembangan diri, dan selalu menghormati proses belajar.</p>
 
+  <!-- CYBER SOUNDSYSTEM PROTOCOL -->
+  <div style="margin: 20px 0; padding: 10px; border: 1px solid #00ff33; text-align: center;">
+    <p style="color: #00ff33; font-weight: bold; margin-bottom: 10px;">[ AUDIO PROTOCOL: ACTIVE ]</p>
+    <audio controls autoplay loop style="filter: invert(1);">
+      <source src="https://actions.google.com/sounds/v1/alarms/digital_watch_alarm_long.ogg" type="audio/ogg">
+      Browser kamu tidak mendukung pemutar audio ini.
+    </audio>
+  </div>
+
+  <!-- HACKER FOOTAGE BUTTON -->
+  <div style="text-align: center; margin-top: 15px;">
+    <a href="https://www.youtube.com/watch?v=d6hN1Wn4RKQ" style="color: #00ff33; text-decoration: none; border: 2px solid #00ff33; padding: 10px; display: inline-block;">
+      [ ACCESS HACKER FOOTAGE PROTOCOL ]
+    </a>
+  </div>
+
+  <!-- EZASHIELD CYBER AI TERMINAL -->
+  <div style="max-width: 400px; margin: 30px auto; padding: 15px; border: 2px solid #00ff33; background: black; font-family: 'Courier New', monospace; box-shadow: 0 0 15px #00ff33; border-radius: 5px;">
+    <div style="color: #00ff33; text-align: center; font-weight: bold; margin-bottom: 10px; border-bottom: 1px dashed #00ff33; padding-bottom: 5px;">[ EZASHIELD AI TERMINAL v1.0 ]</div>
+    <div id="chat-box" style="height: 200px; overflow-y: auto; color: #00ff33; font-size: 13px; margin-bottom: 10px; padding: 5px; border: 1px solid #003300; background: #020c02;">
+      <p style="margin: 5px 0;">🤖 <strong>AI:</strong> Sistem aktif. Halo Operator Eza. Ada yang bisa dibantu?</p>
+    </div>
+    <div style="display: flex;">
+      <input type="text" id="user-input" placeholder="Ketik pesan..." style="flex: 1; background: black; border: 1px solid #00ff33; color: #00ff33; padding: 5px; font-family: 'Courier New', monospace; outline: none;">
+      <button onclick="kirimPesan()" style="background: #00ff33; color: black; border: none; padding: 5px 10px; font-weight: bold; cursor: pointer; font-family: 'Courier New', monospace; margin-left: 5px;">KIRIM</button>
+    </div>
+  </div>
+
+  <script>
+    function kirimPesan() {
+      var inputField = document.getElementById("user-input");
+      var chatBox = document.getElementById("chat-box");
+      var pesanUser = inputField.value.trim();
+      if (pesanUser === "") return;
+      chatBox.innerHTML += "<p style='margin: 5px 0; color: #ffffff;'>👤 <strong>Lu:</strong> " + pesanUser + "</p>";
+      var pesanCek = pesanUser.toLowerCase();
+      var responAI = "";
+      if (pesanCek.includes("halo")) responAI = "Halo, Operator Eza. Sistem siap!";
+      else if (pesanCek.includes("hacker")) responAI = "Hacker sejati fokus pada pertahanan (White Hat).";
+      else if (pesanCek.includes("status")) responAI = "Semua protokol aktif. Sistem AMAN.";
+      else responAI = "Keyword tidak dikenali.";
+      setTimeout(function() {
+        chatBox.innerHTML += "<p style='margin: 5px 0; color: #00ff33;'>🤖 <strong>AI:</strong> " + responAI + "</p>";
+        chatBox.scrollTop = chatBox.scrollHeight;
+      }, 400);
+      inputField.value = "";
+    }
+  </script>
+
 </body>
-</html><!-- CYBER SOUNDSYSTEM PROTOCOL -->
-<div style="margin: 20px 0; padding: 10px; border: 1px dashed #00ff33; background: #1a1a1a; text-align: center;">
-  <p style="color: #00ff33; font-weight: bold; margin-top: 0;">[ AUDIO PROTOCOL: ACTIVE ]</p>
-  <audio controls autoplay loop style="filter: invert(1) hue-rotate(90deg); width: 100%; max-width: 300px
-  <source src="https://actions.google.com/sounds/v1/ambient/ambient_hum_air_conditioner.mp3" type="audio/mp3">
-
-
-    Browser kamu tidak mendukung pemutar audio ini.
-  </audio>
-</div>
-
-<div style="text-align: center; margin-top: 15px;">
-  <a href="https://www.youtube.com/watch?v=d6hN1Wn4Rk0" target="_blank" style="color: #00ff33; text-decoration: none; border: 1px solid #00ff33; padding: 8px 15px; font-family: 'Courier New', monospace; font-weight: bold; background: black; box-shadow: 0 0 10px #00ff33; display: inline-block;">
-    [ ACCESS HACKER FOOTAGE PROTOCOL ]
-  </a>
-</div>
-
-
-
+</html>
